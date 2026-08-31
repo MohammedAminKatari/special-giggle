@@ -1,0 +1,10 @@
+#dependances
+node_modules/
+#Enviroment variables
+.env
+.env .local
+#vs code settings
+.vscode/
+#os files
+.DS_store
+Thumbs .db
