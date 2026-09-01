@@ -29,7 +29,7 @@ button {
   display: flex;
 }
 .sidebar {
-  width: 220px;
+  width: 218px;
   flex: 0 0 252px;
   background: var(--ink);
   color: #fff;
@@ -77,9 +77,9 @@ button {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: #f2c0a1;
-  color: #713f35;
-  font-weight: 700;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
 }
 .avatar {
   width: 38px;
@@ -229,13 +229,13 @@ button {
   color: black;
   flex-direction: row;
   align-items: center;
-  padding: 0 4%;
+  padding: 0 1%;
   position: fixed;
   top: 0;
-  left: 252px;
+  left: auto;
   width: 100%;
   z-index: 1000;
-  gap: 30px;
+  gap: 20px;
 }
 .first {
   display: flex;
@@ -275,8 +275,8 @@ button {
 }
 .searchbar::placeholder {
   font-style: italic;
-  font-size: 16px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   line-height: 2px;
 }
@@ -299,8 +299,8 @@ button {
   opacity: 2s;
 }
 .top-actions {
-  background: gold;
-  display: flex;
+  display: inline-block;
+  position: relative;
   width: 45px;
   height: 45px;
 }
@@ -313,33 +313,43 @@ button {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  margin: 0 2px 0 0;
+  position: absolute;
+  top: -2px;
+  right: -1px;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-weight: bold;
 }
 .link-noti {
+  font-size: 30px;
+  margin-left: 7px;
+}
+.top-action {
   display: flex;
-  background-color: blue;
-  height: 24px;
-  width: 24px;
-  margin: 12px 0 0 6px;
-  position: static;
+  height: 69px;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: 2px solid white;
+  flex-shrink: 0;
 }
-/*
-.notification-button span {
-  width: 6px;
-  height: 6px;
-  background: #ec8a76;
-  border-radius: 50%;
-  position: absolute;
-  top: 2px;
-  right: 1px;
-}
-  */
 .top-avatar {
-  width: 31px;
-  height: 31px;
-  font-size: 10px;
+  width: 64px;
+  height: 64px;
+}
+.profile-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.name {
+  font-size: 20px;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  padding: 0 0 0 6px;
 }
 .menu-toggle {
   display: none;
