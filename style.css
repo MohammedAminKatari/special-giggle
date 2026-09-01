@@ -301,11 +301,31 @@ button {
 .top-actions {
   background: gold;
   display: flex;
+  width: 45px;
+  height: 45px;
 }
-.top-actions .icon-button {
-  color: #75849a;
-  font-size: 22px;
+.icon-button {
+  text-decoration: none;
 }
+.noti {
+  display: flex;
+  background-color: red;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin: 0 2px 0 0;
+  justify-content: center;
+  align-items: center;
+}
+.link-noti {
+  display: flex;
+  background-color: blue;
+  height: 24px;
+  width: 24px;
+  margin: 12px 0 0 6px;
+  position: static;
+}
+/*
 .notification-button span {
   width: 6px;
   height: 6px;
@@ -315,6 +335,7 @@ button {
   top: 2px;
   right: 1px;
 }
+  */
 .top-avatar {
   width: 31px;
   height: 31px;
