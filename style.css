@@ -29,7 +29,7 @@ button {
   display: flex;
 }
 .sidebar {
-  width: 218px;
+  width: 220px;
   flex: 0 0 252px;
   background: var(--ink);
   color: #fff;
@@ -56,9 +56,11 @@ button {
   display: grid;
   place-items: center;
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 .brand-mark img {
-  width: 60px;
+  width: 90px;
   mix-blend-mode: multiply;
 }
 .brand-dot {
@@ -67,17 +69,19 @@ button {
 .profile-mini {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  height: 90px;
+  gap: 20px;
   border-top: 1px solid #30405a;
   border-bottom: 1px solid #30405a;
-  padding: 17px 8px;
+  padding: 0 0 0 12px;
 }
 .avatar,
 .top-avatar {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  font-weight: bold;
   width: 50px;
   height: 50px;
 }
@@ -115,7 +119,7 @@ button {
 .eyebrow {
   color: var(--muted);
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 1.3px;
   font-weight: 700;
   margin: 0 12px 11px;
@@ -229,18 +233,19 @@ button {
   color: black;
   flex-direction: row;
   align-items: center;
-  padding: 0 1%;
+  padding: 0 3%;
   position: fixed;
   top: 0;
   left: auto;
   width: 100%;
   z-index: 1000;
-  gap: 20px;
+  gap: 40px;
 }
 .first {
   display: flex;
-  font-size: 12px;
+  font-size: 14px;
   color: #a5afbd;
+  text-decoration: none;
 }
 .first i {
   font-style: normal;
@@ -252,50 +257,50 @@ button {
 }
 .secound {
   display: flex;
-  width: 48%;
-  height: 45px;
+  width: 40%;
+  height: 52px;
   align-items: center;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 25px;
+  background: #f8fafc;
+  border: 1px solid #d9e1ea;
+  border-radius: 18px;
 }
 .searchbar {
-  width: 92%;
-  height: 45px;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  width: 82%;
+  height: 50px;
   font-size: 18px;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
   border: none;
   outline: none;
-  line-height: 4px;
+  letter-spacing: 1.3px;
   font-family: "Times New Roman", Times, serif;
   font-display: block;
   background: transparent;
   padding: 0 0 0 5.5%;
 }
 .searchbar::placeholder {
-  font-style: italic;
-  font-size: 14px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
-  line-height: 2px;
 }
 .search-button {
   height: 45px;
-  width: 8%;
+  width: 89px;
   border: none;
   outline: none;
-  border-top-right-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: 1px solid #ddd;
+  background-color: #246bce;
+  color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid #d9e1ea;
   cursor: pointer;
+  font-weight: light;
 }
 .search-button:hover {
-  background-color: #ddd;
+  background-color: var(--blue);
   opacity: 1s;
 }
 .search-button:active {
-  background-color: lightgray;
+  background-color: skyblue;
   opacity: 2s;
 }
 .top-actions {
@@ -332,7 +337,6 @@ button {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  border: 2px solid white;
   flex-shrink: 0;
 }
 .top-avatar {
