@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Grades</title>
+    <title>Messages</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,71 +132,68 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">ACADEMIC RECORD</p>
-              <h1>Grades</h1>
+              <p class="eyebrow">COMMUNICATION</p>
+              <h1>Messages</h1>
               <p class="subheading">
-                Track assessment results, course averages, and your progress
-                toward the degree.
+                Stay connected with instructors, advisors, and your academic
+                community.
               </p>
             </div>
-            <span class="status-badge success">GPA 3.84</span>
+            <span class="status-badge">2 unread</span>
           </div>
-          <section class="pro-card wide">
-            <div class="section-heading">
-              <div>
-                <p class="eyebrow">SPRING 2025</p>
-                <h2>Current results</h2>
+          <div class="content-grid two">
+            <section class="pro-card message-list">
+              <div class="section-heading">
+                <h2>Inbox</h2>
+                <span class="muted">5 conversations</span>
               </div>
-              <span class="muted">Last updated today</span>
-            </div>
-            <div class="grade-table">
-              <div class="table-head">
-                <span>Course</span><span>Assessment</span><span>Score</span
-                ><span>Status</span>
+              <article class="message active">
+                <span class="avatar">JS</span>
+                <div>
+                  <strong>Dr. Jordan Smith</strong>
+                  <p>Your Software Engineering project checkpoint</p>
+                  <small>10 minutes ago</small>
+                </div>
+                <b>1</b>
+              </article>
+              <article class="message">
+                <span class="avatar">AM</span>
+                <div>
+                  <strong>Academic Advising</strong>
+                  <p>Spring registration reminder</p>
+                  <small>Yesterday</small>
+                </div>
+              </article>
+              <article class="message">
+                <span class="avatar">LC</span>
+                <div>
+                  <strong>Library Services</strong>
+                  <p>Extended opening hours this week</p>
+                  <small>Yesterday</small>
+                </div>
+              </article>
+              <article class="message">
+                <span class="avatar">RS</span>
+                <div>
+                  <strong>Research Methods</strong>
+                  <p>Feedback on your proposal draft</p>
+                  <small>Feb 18</small>
+                </div>
+              </article>
+            </section>
+            <aside class="pro-card message-preview">
+              <p class="eyebrow">SELECTED MESSAGE</p>
+              <h2>Your Software Engineering project checkpoint</h2>
+              <span class="muted">Dr. Jordan Smith • Today, 9:42 AM</span>
+              <p>
+                Hello Alex, your project checkpoint is due on Monday. Please
+                make sure your submission includes the current architecture
+                diagram, testing notes, and a short summary of outstanding work.
+              </p>
+              <div class="reply-note">
+                Remember to submit before 11:59 PM on Feb 24.
               </div>
-              <div>
-                <span
-                  ><strong>Software Engineering</strong
-                  ><small>CS 301</small></span
-                ><span>Project checkpoint</span><strong>88%</strong
-                ><span class="status-badge success">Strong</span>
-              </div>
-              <div>
-                <span
-                  ><strong>Algorithms &amp; Complexity</strong
-                  ><small>CS 305</small></span
-                ><span>Problem set 6</span><strong>86%</strong
-                ><span class="status-badge success">Strong</span>
-              </div>
-              <div>
-                <span><strong>Design Systems</strong><small>CS 307</small></span
-                ><span>UI case study</span><strong>91%</strong
-                ><span class="status-badge success">Excellent</span>
-              </div>
-              <div>
-                <span
-                  ><strong>Research Methods</strong><small>RM 201</small></span
-                ><span>Research proposal</span><strong>79%</strong
-                ><span class="status-badge warning">Good</span>
-              </div>
-            </div>
-          </section>
-          <div class="content-grid three">
-            <article class="pro-card">
-              <span class="muted">Semester GPA</span>
-              <div class="big-number">3.84</div>
-              <p>Up 0.12 from the previous semester.</p>
-            </article>
-            <article class="pro-card">
-              <span class="muted">Average score</span>
-              <div class="big-number">86%</div>
-              <p>Across completed assessments.</p>
-            </article>
-            <article class="pro-card">
-              <span class="muted">Credits earned</span>
-              <div class="big-number">84</div>
-              <p>36 credits remaining to graduate.</p>
-            </article>
+            </aside>
           </div>
         </div>
       </main>

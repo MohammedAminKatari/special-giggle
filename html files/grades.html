@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Courses</title>
+    <title>Grades</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,99 +132,72 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">COURSE • CS 301</p>
-              <h1>Software Engineering</h1>
+              <p class="eyebrow">ACADEMIC RECORD</p>
+              <h1>Grades</h1>
               <p class="subheading">
-                A practical guide to building maintainable software from
-                requirements through delivery.
+                Track assessment results, course averages, and your progress
+                toward the degree.
               </p>
             </div>
-            <span class="status-badge success">In progress</span>
-          </div>
-          <div class="content-grid two">
-            <section class="pro-card">
-              <div class="section-heading">
-                <div>
-                  <p class="eyebrow">CURRENT MODULE</p>
-                  <h2>Software requirements</h2>
-                </div>
-                <span class="status-badge">Week 8</span>
-              </div>
-              <p>
-                Learn how to identify stakeholders, document functional
-                requirements, define constraints, and translate user needs into
-                clear engineering specifications.
-              </p>
-              <div class="lesson-list">
-                <div>
-                  <span class="number">01</span>
-                  <div>
-                    <strong>Requirements discovery</strong
-                    ><small>Stakeholders, interviews, and user needs</small>
-                  </div>
-                  <span>Complete</span>
-                </div>
-                <div>
-                  <span class="number">02</span>
-                  <div>
-                    <strong>Use-case modelling</strong
-                    ><small>Actors, scenarios, and acceptance criteria</small>
-                  </div>
-                  <span>Complete</span>
-                </div>
-                <div>
-                  <span class="number">03</span>
-                  <div>
-                    <strong>Specification writing</strong
-                    ><small>Clear, testable software requirements</small>
-                  </div>
-                  <span>In progress</span>
-                </div>
-              </div>
-            </section>
-            <aside class="pro-card">
-              <p class="eyebrow">COURSE PROGRESS</p>
-              <div class="big-number">82%</div>
-              <div class="progress"><span style="width: 82%"></span></div>
-              <p class="muted">10 of 12 weeks completed</p>
-              <hr />
-              <div class="mini-stat">
-                <span>Next assessment</span><strong>Feb 24</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Assignments due</span><strong>2</strong>
-              </div>
-            </aside>
+            <span class="status-badge success">GPA 3.84</span>
           </div>
           <section class="pro-card wide">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">UP NEXT</p>
-                <h2>Recommended focus</h2>
+                <p class="eyebrow">SPRING 2025</p>
+                <h2>Current results</h2>
               </div>
+              <span class="muted">Last updated today</span>
             </div>
-            <div class="focus-list">
-              <div>
-                <span>→</span>
-                <div>
-                  <strong>Review software architecture patterns</strong>
-                  <p>
-                    Prepare for the upcoming design and implementation workshop.
-                  </p>
-                </div>
+            <div class="grade-table">
+              <div class="table-head">
+                <span>Course</span><span>Assessment</span><span>Score</span
+                ><span>Status</span>
               </div>
               <div>
-                <span>→</span>
-                <div>
-                  <strong>Submit project checkpoint</strong>
-                  <p>
-                    Upload your current system design and testing notes before
-                    the deadline.
-                  </p>
-                </div>
+                <span
+                  ><strong>Software Engineering</strong
+                  ><small>CS 301</small></span
+                ><span>Project checkpoint</span><strong>88%</strong
+                ><span class="status-badge success">Strong</span>
+              </div>
+              <div>
+                <span
+                  ><strong>Algorithms &amp; Complexity</strong
+                  ><small>CS 305</small></span
+                ><span>Problem set 6</span><strong>86%</strong
+                ><span class="status-badge success">Strong</span>
+              </div>
+              <div>
+                <span><strong>Design Systems</strong><small>CS 307</small></span
+                ><span>UI case study</span><strong>91%</strong
+                ><span class="status-badge success">Excellent</span>
+              </div>
+              <div>
+                <span
+                  ><strong>Research Methods</strong><small>RM 201</small></span
+                ><span>Research proposal</span><strong>79%</strong
+                ><span class="status-badge warning">Good</span>
               </div>
             </div>
           </section>
+          <div class="content-grid three">
+            <article class="pro-card">
+              <span class="muted">Semester GPA</span>
+              <div class="big-number">3.84</div>
+              <p>Up 0.12 from the previous semester.</p>
+            </article>
+            <article class="pro-card">
+              <span class="muted">Average score</span>
+              <div class="big-number">86%</div>
+              <p>Across completed assessments.</p>
+            </article>
+            <article class="pro-card">
+              <span class="muted">Credits earned</span>
+              <div class="big-number">84</div>
+              <p>36 credits remaining to graduate.</p>
+            </article>
+          </div>
         </div>
       </main>
     </div>

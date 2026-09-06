@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Profile</title>
+    <title>Search</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,70 +132,54 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">ACCOUNT</p>
-              <h1>Profile</h1>
+              <p class="eyebrow">FIND INFORMATION</p>
+              <h1>Search</h1>
               <p class="subheading">
-                Your student identity, academic information, and contact
-                details.
+                Search your student portal for courses, grades, tasks, messages,
+                and academic resources.
               </p>
             </div>
-            <span class="status-badge success">Active student</span>
           </div>
-          <div class="content-grid two">
-            <section class="pro-card profile-card">
-              <div class="profile-head">
-                <img src="download.jpg" alt="Alex Morgan profile photo" />
-                <div>
-                  <h2>Alex Morgan</h2>
-                  <p>Computer Science • Undergraduate</p>
-                  <span class="status-badge">Student ID: CS-2025-084</span>
-                </div>
-              </div>
-              <div class="detail-grid">
-                <div>
-                  <span>University email</span
-                  ><strong>alex.morgan@northstar.edu</strong>
-                </div>
-                <div><span>Academic year</span><strong>Year 3</strong></div>
-                <div>
-                  <span>Department</span><strong>Computer Science</strong>
-                </div>
-                <div>
-                  <span>Expected graduation</span><strong>May 2026</strong>
-                </div>
-              </div>
-            </section>
-            <aside class="pro-card">
-              <p class="eyebrow">ACADEMIC SUMMARY</p>
-              <div class="mini-stat">
-                <span>Current GPA</span><strong>3.84</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Credits earned</span><strong>84 / 120</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Attendance</span><strong>94%</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Study streak</span><strong>12 days</strong>
-              </div>
-            </aside>
-          </div>
+          <section class="pro-card wide search-panel">
+            <div class="large-search">
+              ⌕ <span>Search courses, assignments, grades...</span
+              ><button>Search</button>
+            </div>
+            <div class="search-suggestions">
+              <span>Software Engineering</span><span>Algorithms</span
+              ><span>Upcoming deadlines</span><span>Grades</span>
+            </div>
+          </section>
           <section class="pro-card wide">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">CONTACT &amp; SUPPORT</p>
-                <h2>Student information</h2>
+                <p class="eyebrow">RECENT RESULTS</p>
+                <h2>Useful destinations</h2>
               </div>
             </div>
-            <div class="info-row">
-              <span>Academic advisor</span><strong>Dr. Jordan Smith</strong>
+            <div class="result-row">
+              <span class="result-icon blue-bg">▦</span>
+              <div>
+                <strong>My Courses</strong>
+                <p>Browse your active modules and course progress.</p>
+              </div>
+              <a href="courses.html">Open ↗</a>
             </div>
-            <div class="info-row">
-              <span>Advisor email</span><strong>advisor@northstar.edu</strong>
+            <div class="result-row">
+              <span class="result-icon coral-bg">✓</span>
+              <div>
+                <strong>Grades</strong>
+                <p>Review your assessment scores and GPA.</p>
+              </div>
+              <a href="grades.html">Open ↗</a>
             </div>
-            <div class="info-row">
-              <span>Programme</span><strong>BSc Computer Science</strong>
+            <div class="result-row">
+              <span class="result-icon lilac-bg">◷</span>
+              <div>
+                <strong>Tasks &amp; Deadlines</strong>
+                <p>See what needs your attention next.</p>
+              </div>
+              <a href="tasks.html">Open ↗</a>
             </div>
           </section>
         </div>

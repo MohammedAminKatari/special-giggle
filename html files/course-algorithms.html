@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +18,7 @@
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -113,7 +113,7 @@
           <div class="top-action">
             <a class="top-avatar" href="profile.html" aria-label="Open profile">
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,82 +128,98 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">ACADEMIC WORKSPACE</p>
-              <h1>My Courses</h1>
+              <p class="eyebrow">COURSE • CS 305</p>
+              <h1>Algorithms &amp; Complexity</h1>
               <p class="subheading">
-                Manage your current modules, review course progress, and stay on
-                top of your semester.
+                Develop efficient solutions and learn how to evaluate their
+                performance.
               </p>
             </div>
-            <a class="primary-button" href="calendar.html">View schedule ↗</a>
+            <span class="status-badge warning">Assessment soon</span>
           </div>
-          <div class="content-grid three">
-            <article class="pro-card">
-              <div class="course-icon blue-bg">SE</div>
-              <div>
-                <span class="muted">CS 301</span>
-                <h2>Software Engineering</h2>
-                <p>
-                  Build reliable software through requirements, design, testing,
-                  and project planning.
-                </p>
+          <div class="content-grid two">
+            <section class="pro-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">LEARNING PATH</p>
+                  <h2>Core topics</h2>
+                </div>
               </div>
-              <div class="card-meta">
-                <span>12 weeks</span><strong>82% complete</strong>
+              <div class="topic-grid">
+                <div>
+                  <strong>01</strong>
+                  <h3>Complexity analysis</h3>
+                  <p>
+                    Big-O notation, growth rates, and performance trade-offs.
+                  </p>
+                </div>
+                <div>
+                  <strong>02</strong>
+                  <h3>Sorting &amp; searching</h3>
+                  <p>
+                    Compare common algorithms and choose the right approach.
+                  </p>
+                </div>
+                <div>
+                  <strong>03</strong>
+                  <h3>Graphs &amp; trees</h3>
+                  <p>
+                    Traverse, model, and solve problems using structured data.
+                  </p>
+                </div>
+                <div>
+                  <strong>04</strong>
+                  <h3>Dynamic programming</h3>
+                  <p>Break complex problems into reusable subproblems.</p>
+                </div>
               </div>
-              <div class="progress"><span style="width: 82%"></span></div>
-              <a class="text-button" href="course-software.html"
-                >Open course ↗</a
-              >
-            </article>
-            <article class="pro-card">
-              <div class="course-icon coral-bg">AL</div>
-              <div>
-                <span class="muted">CS 305</span>
-                <h2>Algorithms &amp; Complexity</h2>
-                <p>
-                  Strengthen problem-solving skills with efficient algorithms
-                  and computational analysis.
-                </p>
-              </div>
-              <div class="card-meta">
-                <span>12 weeks</span><strong>68% complete</strong>
-              </div>
+            </section>
+            <aside class="pro-card">
+              <p class="eyebrow">YOUR PROGRESS</p>
+              <div class="big-number">68%</div>
               <div class="progress"><span style="width: 68%"></span></div>
-              <a class="text-button" href="course-algorithms.html"
-                >Open course ↗</a
-              >
-            </article>
-            <article class="pro-card">
-              <div class="course-icon lilac-bg">DS</div>
-              <div>
-                <span class="muted">CS 307</span>
-                <h2>Design Systems</h2>
-                <p>
-                  Explore interface systems, reusable components, accessibility,
-                  and visual consistency.
-                </p>
+              <div class="mini-stat">
+                <span>Completed</span><strong>17 / 25 lessons</strong>
               </div>
-              <div class="card-meta">
-                <span>12 weeks</span><strong>74% complete</strong>
+              <div class="mini-stat">
+                <span>Current score</span><strong>86%</strong>
               </div>
-              <div class="progress"><span style="width: 74%"></span></div>
-              <a class="text-button" href="course-design.html">Open course ↗</a>
-            </article>
+              <div class="mini-stat">
+                <span>Next quiz</span><strong>Friday</strong>
+              </div>
+            </aside>
           </div>
           <section class="pro-card wide">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">SEMESTER SNAPSHOT</p>
-                <h2>Course workload</h2>
+                <p class="eyebrow">STUDY PLAN</p>
+                <h2>This week</h2>
               </div>
-              <span class="status-badge">Spring 2025</span>
+              <a class="text-button" href="tasks.html">View tasks ↗</a>
             </div>
-            <div class="metric-row">
-              <div><strong>5</strong><span>Active courses</span></div>
-              <div><strong>14</strong><span>Assignments</span></div>
-              <div><strong>3</strong><span>Assessments</span></div>
-              <div><strong>84%</strong><span>Average progress</span></div>
+            <div class="plan-row">
+              <span>Mon</span>
+              <div>
+                <strong>Review recursion</strong>
+                ><small>45 min • Lecture notes</small>
+              </div>
+              <span class="status-badge success">Done</span>
+            </div>
+            <div class="plan-row">
+              <span>Wed</span>
+              <div>
+                <strong>Practice sorting problems</strong>
+                ><small>60 min • Problem set 6</small>
+              </div>
+              <span class="status-badge">Planned</span>
+            </div>
+            <div class="plan-row">
+              <span>Fri</span>
+              <div>
+                <strong>Complete complexity quiz</strong
+                ><small>30 min • Online assessment</small>
+              </div>
+              <span class="status-badge warning">Upcoming</span>
             </div>
           </section>
         </div>

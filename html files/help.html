@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Courses</title>
+    <title>Help</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,98 +132,81 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">COURSE • CS 305</p>
-              <h1>Algorithms &amp; Complexity</h1>
+              <p class="eyebrow">SUPPORT CENTER</p>
+              <h1>How can we help?</h1>
               <p class="subheading">
-                Develop efficient solutions and learn how to evaluate their
-                performance.
+                Find quick answers about courses, grades, schedules, messages,
+                and your student account.
               </p>
             </div>
-            <span class="status-badge warning">Assessment soon</span>
           </div>
-          <div class="content-grid two">
-            <section class="pro-card">
-              <div class="section-heading">
-                <div>
-                  <p class="eyebrow">LEARNING PATH</p>
-                  <h2>Core topics</h2>
-                </div>
-              </div>
-              <div class="topic-grid">
-                <div>
-                  <strong>01</strong>
-                  <h3>Complexity analysis</h3>
-                  <p>
-                    Big-O notation, growth rates, and performance trade-offs.
-                  </p>
-                </div>
-                <div>
-                  <strong>02</strong>
-                  <h3>Sorting &amp; searching</h3>
-                  <p>
-                    Compare common algorithms and choose the right approach.
-                  </p>
-                </div>
-                <div>
-                  <strong>03</strong>
-                  <h3>Graphs &amp; trees</h3>
-                  <p>
-                    Traverse, model, and solve problems using structured data.
-                  </p>
-                </div>
-                <div>
-                  <strong>04</strong>
-                  <h3>Dynamic programming</h3>
-                  <p>Break complex problems into reusable subproblems.</p>
-                </div>
-              </div>
-            </section>
-            <aside class="pro-card">
-              <p class="eyebrow">YOUR PROGRESS</p>
-              <div class="big-number">68%</div>
-              <div class="progress"><span style="width: 68%"></span></div>
-              <div class="mini-stat">
-                <span>Completed</span><strong>17 / 25 lessons</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Current score</span><strong>86%</strong>
-              </div>
-              <div class="mini-stat">
-                <span>Next quiz</span><strong>Friday</strong>
-              </div>
-            </aside>
+          <section class="pro-card wide help-search">
+            <div class="fake-search">
+              ⌕ <span>Search the student help center</span>
+            </div>
+          </section>
+          <div class="content-grid three">
+            <article class="pro-card">
+              <span class="help-icon blue-bg">?</span>
+              <h2>Academic records</h2>
+              <p>
+                Understand grades, GPA calculations, credits, transcripts, and
+                academic progress.
+              </p>
+              <a class="text-button" href="grades.html"
+                >View grades ↗</a
+              >
+            </article>
+            <article class="pro-card">
+              <span class="help-icon coral-bg">▦</span>
+              <h2>Courses &amp; schedule</h2>
+              <p>
+                Find course information, upcoming classes, deadlines, and
+                semester planning tools.
+              </p>
+              <a class="text-button" href="courses.html"
+                >Browse courses ↗</a
+              >
+            </article>
+            <article class="pro-card">
+              <span class="help-icon lilac-bg">✉</span>
+              <h2>Messages &amp; support</h2>
+              <p>
+                Learn how to contact instructors, advisors, and the student
+                support team.
+              </p>
+              <a class="text-button" href="messages.html"
+                >Open messages ↗</a
+              >
+            </article>
           </div>
           <section class="pro-card wide">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">STUDY PLAN</p>
-                <h2>This week</h2>
+                <p class="eyebrow">POPULAR QUESTIONS</p>
+                <h2>Quick answers</h2>
               </div>
-              <a class="text-button" href="tasks.html">View tasks ↗</a>
             </div>
-            <div class="plan-row">
-              <span>Mon</span>
-              <div>
-                <strong>Review recursion</strong
-                ><small>45 min • Lecture notes</small>
-              </div>
-              <span class="status-badge success">Done</span>
+            <div class="faq">
+              <strong>How do I check my current GPA?</strong
+              ><span
+                >Open Grades to review your semester GPA and assessment
+                results.</span
+              >
             </div>
-            <div class="plan-row">
-              <span>Wed</span>
-              <div>
-                <strong>Practice sorting problems</strong
-                ><small>60 min • Problem set 6</small>
-              </div>
-              <span class="status-badge">Planned</span>
+            <div class="faq">
+              <strong>Where can I find an assignment deadline?</strong
+              ><span
+                >Use Tasks for deadlines or Calendar for a complete view of your
+                schedule.</span
+              >
             </div>
-            <div class="plan-row">
-              <span>Fri</span>
-              <div>
-                <strong>Complete complexity quiz</strong
-                ><small>30 min • Online assessment</small>
-              </div>
-              <span class="status-badge warning">Upcoming</span>
+            <div class="faq">
+              <strong>Who should I contact about academic advising?</strong
+              ><span
+                >Your assigned academic advisor can help with programme planning
+                and progression.</span
+              >
             </div>
           </section>
         </div>

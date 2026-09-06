@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Calander</title>
+    <title>Timetable</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -125,7 +129,80 @@
           </div>
         </header>
 
-        <div class="page-content professional-page"><div class="page-hero"><div><p class="eyebrow">PLANNING</p><h1>Calendar</h1><p class="subheading">See lectures, workshops, assessments, and important academic dates at a glance.</p></div><span class="status-badge">February 2025</span></div><section class="pro-card wide"><div class="calendar-header"><button class="calendar-nav">‹</button><div><strong>February 2025</strong><span>Spring semester • Week 8</span></div><button class="calendar-nav">›</button></div><div class="calendar-grid"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span><div class="muted-day">17</div><div>18</div><div>19</div><div class="today"><strong>20</strong><small>2 events</small></div><div>21</div><div>22</div><div>23</div><div>24<small>Project due</small></div><div>25</div><div>26</div><div>27<small>Quiz</small></div><div>28</div><div class="muted-day">1</div><div class="muted-day">2</div></div></section><div class="content-grid two"><section class="pro-card"><p class="eyebrow">TODAY</p><h2>Thursday, February 20</h2><div class="event-row"><span class="event-time">10:00</span><div><strong>Software Engineering</strong><small>Room 304 • Lecture</small></div><span class="status-badge">90 min</span></div><div class="event-row"><span class="event-time">14:00</span><div><strong>Design systems workshop</strong><small>Innovation Lab • Practical session</small></div><span class="status-badge">90 min</span></div></section><section class="pro-card"><p class="eyebrow">UPCOMING DEADLINES</p><div class="deadline"><strong>Feb 21</strong><span>Algorithms reading • Chapter 7–8</span></div><div class="deadline"><strong>Feb 24</strong><span>Software Engineering • Project checkpoint</span></div><div class="deadline"><strong>Feb 27</strong><span>Algorithms • Complexity quiz</span></div></section></div></div>
+        <div class="page-content professional-page">
+          <div class="page-hero">
+            <div>
+              <p class="eyebrow">WEEKLY PLANNER</p>
+              <h1>Timetable</h1>
+              <p class="subheading">
+                Your regular class schedule for the current semester.
+              </p>
+            </div>
+            <span class="status-badge">Spring 2025</span>
+          </div>
+          <section class="pro-card wide timetable">
+            <div class="time-head">
+              <span>Time</span><span>Monday</span><span>Tuesday</span>
+              ><span>Wednesday</span><span>Thursday</span><span>Friday</span>
+            </div>
+            <div class="time-row">
+              <span>09:00</span><span></span>
+              ><span class="class blue"
+                ><strong>Research Methods</strong><small>Room 208</small></span>
+              ><span></span><span></span>
+              ><span class="class coral"
+                ><strong>Algorithms</strong><small>Lecture Hall B</small></span>
+              >
+            </div>
+            <div class="time-row">
+              <span>10:00</span>
+              ><span class="class blue"
+                ><strong>Software Engineering</strong>
+                ><small>Room 304</small></span>
+              ><span></span>
+              ><span class="class lilac"
+                ><strong>Design Systems</strong>
+                ><small>Innovation Lab</small></span>
+              ><span class="class blue"
+                ><strong>Software Engineering</strong>
+                ><small>Room 304</small></span>
+              ><span></span>
+            </div>
+            <div class="time-row">
+              <span>11:00</span><span></span><span></span><span></span>
+              ><span class="class yellow"
+                ><strong>Research Methods</strong><small>Room 208</small></span>
+              ><span></span>
+            </div>
+            <div class="time-row">
+              <span>14:00</span>
+              ><span class="class yellow"
+                ><strong>Design Systems</strong>
+                ><small>Innovation Lab</small></span>
+              ><span></span
+              ><span class="class coral"
+                ><strong>Algorithms</strong><small>Lecture Hall B</small></span>
+              ><span></span><span></span>
+            </div>
+          </section>
+          <div class="content-grid three">
+            <article class="pro-card">
+              <span class="muted">Classes this week</span>
+              <div class="big-number">12</div>
+              <p>Across five active courses.</p>
+            </article>
+            <article class="pro-card">
+              <span class="muted">Study blocks</span>
+              <div class="big-number">8</div>
+              <p>Recommended independent study sessions.</p>
+            </article>
+            <article class="pro-card">
+              <span class="muted">Next class</span>
+              <div class="big-number">10:00</div>
+              <p>Software Engineering • Thursday</p>
+            </article>
+          </div>
+        </div>
       </main>
     </div>
 

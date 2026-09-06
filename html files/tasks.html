@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Help</title>
+    <title>Tasks</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -128,75 +132,89 @@
         <div class="page-content professional-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">SUPPORT CENTER</p>
-              <h1>How can we help?</h1>
+              <p class="eyebrow">PRODUCTIVITY</p>
+              <h1>Tasks &amp; Deadlines</h1>
               <p class="subheading">
-                Find quick answers about courses, grades, schedules, messages,
-                and your student account.
+                Keep your academic workload organized and focus on the next
+                important action.
               </p>
             </div>
+            <a class="primary-button" href="calendar.html"
+              >Open calendar ↗</a
+            >
           </div>
-          <section class="pro-card wide help-search">
-            <div class="fake-search">
-              ⌕ <span>Search the student help center</span>
-            </div>
-          </section>
-          <div class="content-grid three">
-            <article class="pro-card">
-              <span class="help-icon blue-bg">?</span>
-              <h2>Academic records</h2>
-              <p>
-                Understand grades, GPA calculations, credits, transcripts, and
-                academic progress.
-              </p>
-              <a class="text-button" href="grades.html">View grades ↗</a>
-            </article>
-            <article class="pro-card">
-              <span class="help-icon coral-bg">▦</span>
-              <h2>Courses &amp; schedule</h2>
-              <p>
-                Find course information, upcoming classes, deadlines, and
-                semester planning tools.
-              </p>
-              <a class="text-button" href="courses.html">Browse courses ↗</a>
-            </article>
-            <article class="pro-card">
-              <span class="help-icon lilac-bg">✉</span>
-              <h2>Messages &amp; support</h2>
-              <p>
-                Learn how to contact instructors, advisors, and the student
-                support team.
-              </p>
-              <a class="text-button" href="messages.html">Open messages ↗</a>
-            </article>
+          <div class="content-grid two">
+            <section class="pro-card">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">TODAY</p>
+                  <h2>Priority tasks</h2>
+                </div>
+                <span class="status-badge warning">3 pending</span>
+              </div>
+              <div class="task-card high">
+                <span class="task-check">○</span>
+                <div>
+                  <strong>Submit UX case study</strong
+                  ><small>Design Systems • Due today</small>
+                </div>
+                <span class="priority high">High</span>
+              </div>
+              <div class="task-card">
+                <span class="task-check">○</span>
+                <div>
+                  <strong>Review chapter 7–8</strong
+                  ><small>Algorithms &amp; Complexity • Due tomorrow</small>
+                </div>
+                <span class="priority medium">Medium</span>
+              </div>
+              <div class="task-card">
+                <span class="task-check">○</span>
+                <div>
+                  <strong>Prepare project checkpoint</strong
+                  ><small>Software Engineering • Due Feb 24</small>
+                </div>
+                <span class="priority low">Low</span>
+              </div>
+            </section>
+            <aside class="pro-card">
+              <p class="eyebrow">WEEKLY PROGRESS</p>
+              <div class="big-number">8 / 12</div>
+              <div class="progress"><span style="width: 67%"></span></div>
+              <p>Four tasks remain this week.</p>
+              <hr />
+              <div class="mini-stat">
+                <span>Completed today</span><strong>2</strong>
+              </div>
+              <div class="mini-stat">
+                <span>Due this week</span><strong>5</strong>
+              </div>
+            </aside>
           </div>
           <section class="pro-card wide">
             <div class="section-heading">
               <div>
-                <p class="eyebrow">POPULAR QUESTIONS</p>
-                <h2>Quick answers</h2>
+                <p class="eyebrow">UPCOMING</p>
+                <h2>Next seven days</h2>
               </div>
             </div>
-            <div class="faq">
-              <strong>How do I check my current GPA?</strong
-              ><span
-                >Open Grades to review your semester GPA and assessment
-                results.</span
-              >
-            </div>
-            <div class="faq">
-              <strong>Where can I find an assignment deadline?</strong
-              ><span
-                >Use Tasks for deadlines or Calendar for a complete view of your
-                schedule.</span
-              >
-            </div>
-            <div class="faq">
-              <strong>Who should I contact about academic advising?</strong
-              ><span
-                >Your assigned academic advisor can help with programme planning
-                and progression.</span
-              >
+            <div class="task-timeline">
+              <div>
+                <span>THU 20</span><strong>Submit UX case study</strong
+                ><small>Design Systems</small>
+              </div>
+              <div>
+                <span>FRI 21</span><strong>Reading notes</strong
+                ><small>Algorithms &amp; Complexity</small>
+              </div>
+              <div>
+                <span>MON 24</span><strong>Project checkpoint</strong
+                ><small>Software Engineering</small>
+              </div>
+              <div>
+                <span>WED 26</span><strong>Research proposal review</strong
+                ><small>Research Methods</small>
+              </div>
             </div>
           </section>
         </div>

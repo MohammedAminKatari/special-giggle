@@ -4,21 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#15253f" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../stylesheet/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Courses</title>
+    <title>Notifications</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar">
         <div class="brand">
           <span class="brand-mark"
-            ><img src="1.jpg" alt="Graduation cap"
+            ><img src="../images.jpg" alt="Graduation cap"
           /></span>
           <span>Student Portal<span class="brand-dot">.</span></span>
         </div>
@@ -26,7 +26,7 @@
         <div class="profile-mini">
           <div class="avatar">
             <img
-              src="download.jpg"
+              src="../download.jpg"
               alt="profile-picture"
               class="profile-image"
             />
@@ -39,7 +39,7 @@
 
         <nav class="main-nav" aria-label="Main navigation">
           <p class="nav-label">Workspace</p>
-          <a class="nav-item" href="index.html"
+          <a class="nav-item" href="../index.html"
             ><span class="nav-icon">⌂</span>Overview</a
           >
           <a class="nav-item" href="courses.html"
@@ -59,7 +59,7 @@
             ><span class="nav-icon">✉</span>Messages
             <b class="alert-count">3</b></a
           >
-          <a class="nav-item" href="niti.html"
+          <a class="nav-item" href="notifications.html"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
           >
@@ -111,9 +111,13 @@
           </div>
 
           <div class="top-action">
-            <a class="top-avatar" href="profile.html" aria-label="Open profile">
+            <a
+              class="top-avatar"
+              href="profile.html"
+              aria-label="Open profile"
+            >
               <img
-                src="download.jpg"
+                src="../download.jpg"
                 alt="profile-picture"
                 class="profile-image"
               />
@@ -125,8 +129,73 @@
           </div>
         </header>
 
-        <div class="page-content">
-          <!-- keep existing page content here -->
+        <div class="page-content professional-page">
+          <div class="page-hero">
+            <div>
+              <p class="eyebrow">UPDATES</p>
+              <h1>Notifications</h1>
+              <p class="subheading">
+                Important academic reminders and activity from across your
+                student portal.
+              </p>
+            </div>
+            <span class="status-badge warning">3 unread</span>
+          </div>
+          <section class="pro-card wide">
+            <div class="section-heading">
+              <h2>Recent notifications</h2>
+              <span class="muted">Today</span>
+            </div>
+            <article class="notification unread">
+              <span class="notice-icon coral-bg">!</span>
+              <div>
+                <strong>Project checkpoint due Monday</strong>
+                <p>
+                  Your Software Engineering checkpoint is due Feb 24 at 11:59
+                  PM.
+                </p>
+                <small>10 minutes ago</small>
+              </div>
+            </article>
+            <article class="notification unread">
+              <span class="notice-icon blue-bg">↗</span>
+              <div>
+                <strong>New grade posted</strong>
+                <p>Your Design Systems UI case study has been graded: 91%.</p>
+                <small>1 hour ago</small>
+              </div>
+            </article>
+            <article class="notification unread">
+              <span class="notice-icon lilac-bg">◷</span>
+              <div>
+                <strong>Classroom change</strong>
+                <p>
+                  Tomorrow's Algorithms session will take place in Lecture Hall
+                  B.
+                </p>
+                <small>3 hours ago</small>
+              </div>
+            </article>
+            <article class="notification">
+              <span class="notice-icon">✓</span>
+              <div>
+                <strong>Task completed</strong>
+                <p>You completed the Research Methods reading task.</p>
+                <small>Yesterday</small>
+              </div>
+            </article>
+            <article class="notification">
+              <span class="notice-icon">i</span>
+              <div>
+                <strong>Library hours extended</strong>
+                <p>
+                  The library will remain open until midnight during assessment
+                  season.
+                </p>
+                <small>Yesterday</small>
+              </div>
+            </article>
+          </section>
         </div>
       </main>
     </div>

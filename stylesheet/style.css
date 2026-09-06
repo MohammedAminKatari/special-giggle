@@ -297,11 +297,11 @@ button {
 }
 .search-button:hover {
   background-color: var(--blue);
-  opacity: 1s;
+  opacity: 1;
 }
 .search-button:active {
   background-color: skyblue;
-  opacity: 2s;
+  opacity: 0.9;
 }
 .top-actions {
   display: inline-block;
@@ -1256,8 +1256,7 @@ select {
   margin-top: 22px;
 }
 .profile-hero {
-  background: var(--ink) url("assets/academic-pattern.svg") right center / 390px
-    auto no-repeat;
+  background: var(--ink);
   color: white;
   padding: 28px;
   display: flex;
