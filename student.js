@@ -1,0 +1,20 @@
+const students = [
+  {
+    name: "Abdul Rahaman",
+    image: "images/download1.jpg",
+    Course: "Computer Science",
+    age: 20,
+    level: 400,
+    status: "Active",
+    studentid: "DTIT250001",
+    department: "Computer Science",
+    graduationyear: 2022,
+    currentGPA: 3.8,
+    creditearned: 84 / 120,
+    attendance: 20,
+    studystreak: "5 days",
+    academicAdvisor: "Rahaman Abdul",
+    AdvisorEmail: "rahamaabdul@gamil.com",
+    Programe: "Bsc Computer Science",
+  },
+];
