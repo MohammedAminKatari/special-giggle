@@ -1,14 +1,14 @@
-const students = [
+export let students = [
   {
     name: "Abdul Rahaman",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Computer Science",
-    age: 20,
+    password: "2020ww",
     level: 400,
     status: "Active",
-    "Student id": "DTIT250001",
+    StudentId: "DTIT250001",
     department: "Computer Science",
-    graduationyear: 2022,
+    GraduationYear: 2022,
     currentGPA: 3.8,
     CreditEarned: "84 / 120",
     attendance: 20,
@@ -19,14 +19,15 @@ const students = [
   },
   {
     name: "Mariam Asante",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Computer Science",
     age: 19,
     level: 300,
     status: "Active",
-    "Student id": "DTIT250002",
+    StudentId: "DTIT250002",
+    password: "2020ww",
     department: "Computer Science",
-    graduationyear: 2023,
+    GraduationYear: 2023,
     currentGPA: 3.6,
     CreditEarned: "72 / 120",
     attendance: 85,
@@ -37,14 +38,15 @@ const students = [
   },
   {
     name: "Kwame Boateng",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Computer Science",
     age: 21,
     level: 400,
     status: "On Leave",
-    "Student id": "DTIT250003",
+    StudentId: "DTIT250003",
+    password: "2020ww",
     department: "Computer Science",
-    graduationyear: 2022,
+    GraduationYear: 2022,
     currentGPA: 3.4,
     CreditEarned: "68 / 120",
     attendance: 76,
@@ -55,14 +57,15 @@ const students = [
   },
   {
     name: "Naa Afi",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Information Technology",
     age: 18,
     level: 200,
     status: "Active",
-    "Student id": "DTIT250004",
+    StudentId: "DTIT250004",
+    password: "2020ww",
     department: "Information Technology",
-    graduationyear: 2024,
+    GraduationYear: 2024,
     currentGPA: 3.9,
     CreditEarned: "90 / 120",
     attendance: 92,
@@ -73,14 +76,15 @@ const students = [
   },
   {
     name: "Daniel Mensah",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Software Engineering",
     age: 22,
     level: 400,
     status: "Active",
-    "Student id": "DTIT250005",
+    StudentId: "DTIT250005",
+    password: "2020ww",
     department: "Software Engineering",
-    graduationyear: 2022,
+    GraduationYear: 2022,
     currentGPA: 3.7,
     CreditEarned: "80 / 120",
     attendance: 88,
@@ -91,14 +95,15 @@ const students = [
   },
   {
     name: "Efua Johnson",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Cybersecurity",
     age: 20,
     level: 300,
     status: "Active",
-    "Student id": "DTIT250006",
+    StudentId: "DTIT250006",
+    password: "2020ww",
     department: "Cybersecurity",
-    graduationyear: 2023,
+    GraduationYear: 2023,
     currentGPA: 3.5,
     CreditEarned: "70 / 120",
     attendance: 82,
@@ -109,14 +114,15 @@ const students = [
   },
   {
     name: "Kojo Addo",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Computer Science",
     age: 23,
     level: 500,
     status: "Graduating",
-    "Student id": "DTIT250007",
+    StudentId: "DTIT250007",
+    password: "2020ww",
     department: "Computer Science",
-    graduationyear: 2021,
+    GraduationYear: 2021,
     currentGPA: 3.8,
     CreditEarned: "96 / 120",
     attendance: 90,
@@ -127,14 +133,15 @@ const students = [
   },
   {
     name: "Sena Kwarteng",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Data Science",
     age: 19,
     level: 300,
     status: "Active",
-    "Student id": "DTIT250008",
+    StudentId: "DTIT250008",
+    password: "2020ww",
     department: "Data Science",
-    graduationyear: 2023,
+    GraduationYear: 2023,
     currentGPA: 3.6,
     CreditEarned: "75 / 120",
     attendance: 84,
@@ -145,14 +152,15 @@ const students = [
   },
   {
     name: "Selorm Tetteh",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Computer Engineering",
     age: 21,
     level: 400,
     status: "Active",
-    "Student id": "DTIT250009",
+    StudentId: "DTIT250009",
+    password: "2020ww",
     department: "Computer Engineering",
-    graduationyear: 2022,
+    GraduationYear: 2022,
     currentGPA: 3.7,
     CreditEarned: "82 / 120",
     attendance: 87,
@@ -163,14 +171,15 @@ const students = [
   },
   {
     name: "Adwoa Owusu",
-    image: "images/download1.jpg",
+    image: "../images/download1.jpg",
     Course: "Artificial Intelligence",
     age: 20,
     level: 300,
     status: "Active",
-    "Student id": "DTIT250010",
+    StudentId: "DTIT250010",
+    password: "2020ww",
     department: "Artificial Intelligence",
-    graduationyear: 2023,
+    GraduationYear: 2023,
     currentGPA: 3.9,
     CreditEarned: "88 / 120",
     attendance: 91,
@@ -180,3 +189,24 @@ const students = [
     Programme: "Bsc Artificial Intelligence",
   },
 ];
+
+function logIn() {
+  const Id = document.querySelector(".id").value;
+  const Password = document.querySelector(".password").value;
+
+  const inputElement = students.find((student) => {
+    return student.StudentId === Id && student.password === Password;
+  });
+
+  if (inputElement) {
+    localStorage.setItem("Id", Id);
+    alert("WELCOME");
+    window.location.href = "../index.html";
+  } else {
+    alert("Invalid StudentID or Password");
+  }
+}
+const loginBtn = document.querySelector(".loginBtn");
+if (loginBtn) {
+  loginBtn.addEventListener("click", logIn);
+}
