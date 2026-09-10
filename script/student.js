@@ -174,16 +174,16 @@ export let students = [
     image: "../images/download1.jpg",
     Course: "Artificial Intelligence",
     age: 20,
-    level: 300,
+    level: 100,
     status: "Active",
     StudentId: "DTIT250010",
     password: "2020ww",
     department: "Artificial Intelligence",
-    GraduationYear: 2023,
-    currentGPA: 3.9,
-    CreditEarned: "88 / 120",
-    attendance: 91,
-    studyStreak: "11 days",
+    GraduationYear: 2022,
+    currentGPA: 0,
+    CreditEarned: "0 / 120",
+    attendance: 1,
+    studyStreak: "1 days",
     academicAdvisor: "Dr. Samuel Kyei",
     AdvisorEmail: "samuel.kyei@school.edu",
     Programme: "Bsc Artificial Intelligence",
@@ -201,7 +201,7 @@ function logIn() {
   if (inputElement) {
     localStorage.setItem("Id", Id);
     alert("WELCOME");
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
   } else {
     alert("Invalid StudentID or Password");
   }

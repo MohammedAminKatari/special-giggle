@@ -1,9 +1,11 @@
-import { students } from "./student.js";
+import { students } from "../script/student.js";
 
 let studentInfo = "";
 
-const studentId = localStorage.getItem("Id");
-const student = students.find((student) => student.StudentId === studentId);
+export const studentId = localStorage.getItem("Id");
+export const student = students.find(
+  (student) => student.StudentId === studentId,
+);
 
 if (student) {
   studentInfo += `
