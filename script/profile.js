@@ -1,4 +1,5 @@
 import { students } from "../script/student.js";
+import { info } from "../script/index.js";
 
 let studentInfo = "";
 
@@ -92,3 +93,4 @@ const profileContainer = document.querySelector(".js-page-profile");
 if (profileContainer) {
   profileContainer.innerHTML = studentInfo;
 }
+info();

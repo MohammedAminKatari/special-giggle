@@ -1,18 +1,19 @@
 import { student } from "./profile.js";
 
-const sidebar = document.querySelector("#sidebar");
-const topbar = document.querySelector(".topbar");
-const isNestedDashboard = decodeURIComponent(window.location.pathname).includes(
-  "/html files/",
-);
-const pageLink = (fileName) =>
-  isNestedDashboard ? fileName : `html files/${fileName}`;
+export function info() {
+  const sidebar = document.querySelector("#sidebar");
+  const topbar = document.querySelector(".topbar");
+  const isNestedDashboard = decodeURIComponent(
+    window.location.pathname,
+  ).includes("/html files/");
+  const pageLink = (fileName) =>
+    isNestedDashboard ? fileName : `html files/${fileName}`;
 
-if (student) {
-  const profileImage = new URL(student.image, import.meta.url).href;
-  const logoImage = new URL("../images/images.jpg", import.meta.url).href;
+  if (student) {
+    const profileImage = new URL(student.image, import.meta.url).href;
+    const logoImage = new URL("../images/images.jpg", import.meta.url).href;
 
-  sidebar.innerHTML = `
+    sidebar.innerHTML = `
         <div class="brand">
           <span class="brand-mark"
             ><img src="${logoImage}" alt="Graduation cap"
@@ -30,7 +31,7 @@ if (student) {
           </div>
           <div><strong>${student.name}</strong><span>${student.Course}</span></div>
           <button class="icon-button more" aria-label="Profile options">
-            •••
+             •••
           </button>
         </div>
 
@@ -81,7 +82,7 @@ if (student) {
         </div>
       `;
 
-  topbar.innerHTML = `
+    topbar.innerHTML = `
           <div class="first">
             <span>Student portal</span><i>/</i><strong>Overview</strong>
           </div>
@@ -123,4 +124,5 @@ if (student) {
             </span>
           </div>
           `;
+  }
 }
