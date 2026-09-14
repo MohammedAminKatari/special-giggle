@@ -3,7 +3,7 @@ import { info } from "../script/index.js";
 
 let studentInfo = "";
 
-export const studentId = localStorage.getItem("Id");
+const studentId = localStorage.getItem("Id");
 export const student = students.find(
   (student) => student.StudentId === studentId,
 );

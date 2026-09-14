@@ -103,22 +103,25 @@ export function info() {
                 class="icon-button"
                 href="${pageLink("notifications.html")}"
                 aria-label="Notifications"
+              title="View Notifications"
               >
-                🔔 <span></span
-              ></a>
+                🔔 
+               <span class="profile-link-hint">View Notifications</span>
+               </a>
             </div>
-            <div class="noti">3</div>
+            <div class="noti" >3</div>
           </div>
           <div class="top-action">
             <a
               class="top-avatar"
               href="${pageLink("profile.html")}"
-              aria-label="Open profile"
+              aria-label="View profile"
+              title="View profile"
               ><img
                 src="${profileImage}"
                 alt="profile-picture"
                 class="profile-image"
-            /></a>
+            /><span class="profile-link-hint">View profile</span></a>
             <span class="name">
               <strong> ${student.name} </strong>
             </span>
