@@ -1,6 +1,17 @@
 import { info } from "../script/index.js";
 import { student } from "../script/profile.js";
+
 info();
+
+let creditHour = student.subjectCreditHours[0];
+let totalCreditHours = Object.values(creditHour).reduce((total, hour) => {
+  return total + hour;
+});
+
+let creditHours = student.subjectScore[0];
+let totalCreditHour = Object.values(creditHours).reduce((total, hour) => {
+  return total + hour / 6;
+});
 let coursesHTML = "";
 if (student) {
   coursesHTML += `
@@ -91,10 +102,10 @@ if (student) {
               <span class="status-badge">Spring 2025</span>
             </div>
             <div class="metric-row">
-              <div><strong>5</strong><span>Active courses</span></div>
-              <div><strong>14</strong><span>Assignments</span></div>
-              <div><strong>3</strong><span>Assessments</span></div>
-              <div><strong>84%</strong><span>Average progress</span></div>
+              <div><strong>6</strong><span>Active courses</span></div>
+              <div><strong>6</strong><span>Total Courses</span></div>
+              <div><strong>${totalCreditHours.toFixed(1)}</strong><span>Total Credit</span></div>
+              <div><strong>${totalCreditHour.toFixed(0)}%</strong><span>Average progress</span></div>
             </div>
           </section>
     `;

@@ -11,107 +11,318 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <title>Settings</title>
+    <title>Settings | Student Portal</title>
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" id="sidebar"></aside>
 
-      <main class="main-content" id="courses">
+      <main class="main-content" id="settings">
         <header class="topbar"></header>
 
-        <div class="page-content professional-page">
+        <div class="page-content professional-page settings-page">
           <div class="page-hero">
             <div>
-              <p class="eyebrow">PREFERENCES</p>
+              <p class="eyebrow">YOUR PORTAL</p>
               <h1>Settings</h1>
               <p class="subheading">
-                Manage your student portal preferences and account experience.
+                Make your dashboard work better for the way you study.
               </p>
             </div>
-          </div>
-          <div class="content-grid two">
-            <section class="pro-card">
-              <p class="eyebrow">ACCOUNT</p>
-              <h2>Account preferences</h2>
-              <div class="setting-row">
-                <div>
-                  <strong>Profile visibility</strong
-                  ><small
-                    >Allow classmates to see your basic student profile.</small
-                  >
-                </div>
-                <span class="toggle on">On</span>
-              </div>
-              <div class="setting-row">
-                <div>
-                  <strong>Email summaries</strong
-                  ><small
-                    >Receive a daily summary of important portal
-                    activity.</small
-                  >
-                </div>
-                <span class="toggle on">On</span>
-              </div>
-              <div class="setting-row">
-                <div>
-                  <strong>Assignment reminders</strong
-                  ><small>Get reminders before upcoming deadlines.</small>
-                </div>
-                <span class="toggle on">On</span>
-              </div>
-            </section>
-            <section class="pro-card">
-              <p class="eyebrow">NOTIFICATIONS</p>
-              <h2>Notification channels</h2>
-              <div class="setting-row">
-                <div>
-                  <strong>Academic updates</strong
-                  ><small
-                    >Grades, course announcements, and schedule changes.</small
-                  >
-                </div>
-                <span class="toggle on">On</span>
-              </div>
-              <div class="setting-row">
-                <div>
-                  <strong>Messages</strong
-                  ><small>Notify me when an instructor sends a message.</small>
-                </div>
-                <span class="toggle on">On</span>
-              </div>
-              <div class="setting-row">
-                <div>
-                  <strong>Campus events</strong
-                  ><small
-                    >Receive relevant student activities and
-                    opportunities.</small
-                  >
-                </div>
-                <span class="toggle">Off</span>
-              </div>
-            </section>
-          </div>
-          <section class="pro-card wide">
-            <p class="eyebrow">PRIVACY</p>
-            <h2>Data &amp; security</h2>
-            <p>
-              Your academic information is protected and should only be shared
-              through approved university services.
+            <p
+              class="settings-save-state"
+              id="settings-save-state"
+              role="status"
+              aria-live="polite"
+            >
+              Preferences are saved on this device.
             </p>
-            <div class="info-row">
-              <span>Last account activity</span><strong>Today, 8:14 AM</strong>
+          </div>
+
+          <form id="settings-form">
+            <div class="settings-layout">
+              <div class="settings-primary">
+                <section
+                  class="pro-card settings-section"
+                  aria-labelledby="learning-title"
+                >
+                  <div class="settings-section-heading">
+                    <div>
+                      <p class="eyebrow">LEARNING</p>
+                      <h2 id="learning-title">Study preferences</h2>
+                    </div>
+                    <span class="settings-mark" aria-hidden="true">01</span>
+                  </div>
+                  <p class="settings-intro">
+                    Choose how your classes and deadlines appear to you.
+                  </p>
+
+                  <label class="settings-field" for="week-start">
+                    <span
+                      ><strong>Week starts on</strong
+                      ><small
+                        >Used in your calendar and weekly schedule.</small
+                      ></span
+                    >
+                    <select
+                      id="week-start"
+                      name="weekStart"
+                      data-setting="weekStart"
+                    >
+                      <option value="monday">Monday</option>
+                      <option value="sunday">Sunday</option>
+                    </select>
+                  </label>
+                  <label class="settings-field" for="deadline-reminder">
+                    <span
+                      ><strong>Assignment reminders</strong
+                      ><small
+                        >How early to be reminded about due work.</small
+                      ></span
+                    >
+                    <select
+                      id="deadline-reminder"
+                      name="deadlineReminder"
+                      data-setting="deadlineReminder"
+                    >
+                      <option value="same-day">On the due date</option>
+                      <option value="1-day" selected>1 day before</option>
+                      <option value="2-days">2 days before</option>
+                      <option value="1-week">1 week before</option>
+                    </select>
+                  </label>
+                  <label class="settings-field" for="date-format">
+                    <span
+                      ><strong>Date format</strong
+                      ><small
+                        >Choose how dates are shown across your
+                        dashboard.</small
+                      ></span
+                    >
+                    <select
+                      id="date-format"
+                      name="dateFormat"
+                      data-setting="dateFormat"
+                    >
+                      <option value="mdy">MM / DD / YYYY</option>
+                      <option value="dmy">DD / MM / YYYY</option>
+                      <option value="ymd">YYYY / MM / DD</option>
+                    </select>
+                  </label>
+                </section>
+
+                <section
+                  class="pro-card settings-section"
+                  aria-labelledby="notifications-title"
+                >
+                  <div class="settings-section-heading">
+                    <div>
+                      <p class="eyebrow">UPDATES</p>
+                      <h2 id="notifications-title">Notifications</h2>
+                    </div>
+                    <span class="settings-mark" aria-hidden="true">02</span>
+                  </div>
+                  <p class="settings-intro">
+                    Pick the updates you want to see in your student portal.
+                  </p>
+
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Grades and feedback</strong
+                      ><small
+                        >Know when a grade or instructor feedback is
+                        posted.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="true"
+                      aria-label="Grades and feedback"
+                      data-setting="notifyGrades"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Course announcements</strong
+                      ><small
+                        >Updates from your enrolled classes and
+                        instructors.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="true"
+                      aria-label="Course announcements"
+                      data-setting="notifyCourses"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Messages</strong
+                      ><small
+                        >New messages from instructors and classmates.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="true"
+                      aria-label="Messages"
+                      data-setting="notifyMessages"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Campus events</strong
+                      ><small
+                        >Student activities, workshops, and campus news.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="false"
+                      aria-label="Campus events"
+                      data-setting="notifyEvents"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <label class="settings-field" for="summary-frequency">
+                    <span
+                      ><strong>Study summary</strong
+                      ><small
+                        >A roundup of upcoming academic activity.</small
+                      ></span
+                    >
+                    <select
+                      id="summary-frequency"
+                      name="summaryFrequency"
+                      data-setting="summaryFrequency"
+                    >
+                      <option value="off">Off</option>
+                      <option value="daily">Daily</option>
+                      <option value="weekly" selected>Weekly</option>
+                    </select>
+                  </label>
+                </section>
+
+                <section
+                  class="pro-card settings-section"
+                  aria-labelledby="privacy-title"
+                >
+                  <div class="settings-section-heading">
+                    <div>
+                      <p class="eyebrow">PRIVACY</p>
+                      <h2 id="privacy-title">Profile and privacy</h2>
+                    </div>
+                    <span class="settings-mark" aria-hidden="true">03</span>
+                  </div>
+                  <p class="settings-intro">
+                    You decide what other students can see about you.
+                  </p>
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Show my profile to classmates</strong
+                      ><small
+                        >Allow classmates to view your basic student
+                        profile.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="true"
+                      aria-label="Show my profile to classmates"
+                      data-setting="profileVisible"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                  <div class="setting-row settings-switch-row">
+                    <div>
+                      <strong>Show my courses on my profile</strong
+                      ><small
+                        >Let classmates see which courses you are taking.</small
+                      >
+                    </div>
+                    <button
+                      class="settings-switch"
+                      type="button"
+                      role="switch"
+                      aria-checked="false"
+                      aria-label="Show my courses on my profile"
+                      data-setting="coursesVisible"
+                    >
+                      <span></span>
+                    </button>
+                  </div>
+                </section>
+              </div>
+
+              <aside class="settings-aside" aria-label="Account information">
+                <section
+                  class="pro-card settings-section settings-account-card"
+                >
+                  <p class="eyebrow">ACCOUNT</p>
+                  <h2>Account security</h2>
+                  <p class="settings-intro">
+                    Sign-in security is managed through your university account.
+                  </p>
+                  <div class="security-status">
+                    <span class="security-status-icon" aria-hidden="true"
+                      >i</span
+                    >
+                    <span
+                      ><strong>Password and verification</strong
+                      ><small
+                        >Use your university account portal to update your
+                        password or two-step verification.</small
+                      ></span
+                    >
+                  </div>
+                  <div class="security-note">
+                    <strong>Keep your account secure</strong>
+                    <p>
+                      Use a unique password and sign out when using a shared
+                      computer. Contact your campus IT team if you notice
+                      activity you do not recognize.
+                    </p>
+                  </div>
+                </section>
+
+                <section
+                  class="settings-note"
+                  aria-label="Preference storage information"
+                >
+                  <span aria-hidden="true">i</span>
+                  <p>
+                    These preferences are stored locally in this browser. They
+                    do not change university records or send notifications from
+                    a server.
+                  </p>
+                </section>
+              </aside>
             </div>
-            <div class="info-row">
-              <span>Two-step verification</span
-              ><span class="status-badge success">Enabled</span>
-            </div>
-          </section>
+          </form>
         </div>
       </main>
     </div>
 
     <div class="toast" id="toast" role="status"></div>
-    <script type="module" src="../script/index.js"></script>
+    <script type="module" src="../script/settings.js"></script>
   </body>
 </html>

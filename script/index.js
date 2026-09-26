@@ -43,20 +43,10 @@ export function info() {
           <a class="nav-item" href="${pageLink("courses.html")}"
             ><span class="nav-icon">▦</span> Courses <b>6</b></a
           >
-          <a class="nav-item" href="${pageLink("calendar.html")}"
-            ><span class="nav-icon">□</span>Calendar</a
-          >
           <a class="nav-item" href="${pageLink("grades.html")}"
             ><span class="nav-icon">↗</span>Grades</a
           >
-          <a class="nav-item" href="${pageLink("time table.html")}"
-            ><span class="nav-icon">⏱</span>Timetable</a
-          >
           <p class="nav-label">Personal</p>
-          <a class="nav-item" href="${pageLink("messages.html")}"
-            ><span class="nav-icon">✉</span>Messages
-            <b class="alert-count">3</b></a
-          >
           <a class="nav-item" href="${pageLink("notifications.html")}"
             ><span class="nav-icon">🔔</span>Notifications
             <b class="alert-count">3</b></a
