@@ -590,23 +590,23 @@ export let students = [
   },
 ];
 
-function logIn() {
-  const Id = document.querySelector(".id").value;
-  const Password = document.querySelector(".password").value;
+const loginForm = document.querySelector(".form-login");
 
-  const inputElement = students.find((student) => {
-    return student.StudentId === Id && student.password === Password;
-  });
+loginForm?.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-  if (inputElement) {
-    localStorage.setItem("Id", Id);
-    alert("WELCOME");
-    window.location.href = "index.html";
-  } else {
-    alert("Invalid StudentID or Password");
+  const studentId = loginForm.querySelector(".id").value.trim();
+  const password = loginForm.querySelector(".password").value;
+  const matchedStudent = students.find(
+    (student) =>
+      student.StudentId === studentId && student.password === password,
+  );
+
+  if (!matchedStudent) {
+    alert("Invalid Student ID or password.");
+    return;
   }
-}
-const loginBtn = document.querySelector(".loginBtn");
-if (loginBtn) {
-  loginBtn.addEventListener("click", logIn);
-}
+
+  localStorage.setItem("Id", matchedStudent.StudentId);
+  window.location.replace(new URL("../index.html", import.meta.url).href);
+});

@@ -1,6 +1,12 @@
 import { student } from "./profile.js";
+import { logout, redirectToLogin } from "./auth.js";
 
 export function info() {
+  if (!student) {
+    redirectToLogin();
+    return;
+  }
+
   const sidebar = document.querySelector("#sidebar");
   const topbar = document.querySelector(".topbar");
   const isNestedDashboard = decodeURIComponent(
@@ -9,11 +15,10 @@ export function info() {
   const pageLink = (fileName) =>
     isNestedDashboard ? fileName : `html files/${fileName}`;
 
-  if (student) {
-    const profileImage = new URL(student.image, import.meta.url).href;
-    const logoImage = new URL("../images/images.jpg", import.meta.url).href;
+  const profileImage = new URL(student.image, import.meta.url).href;
+  const logoImage = new URL("../images/images.jpg", import.meta.url).href;
 
-    sidebar.innerHTML = `
+  sidebar.innerHTML = `
         <div class="brand">
           <span class="brand-mark"
             ><img src="${logoImage}" alt="Graduation cap"
@@ -54,7 +59,7 @@ export function info() {
           <a class="nav-item" href="${pageLink("settings.html")}"
             ><span class="nav-icon">⚙</span>Settings</a
           >
-          <a class="nav-item" href="${pageLink("login page.html")}"
+          <a class="nav-item logout-link" href="${pageLink("login page.html")}"
             ><span class="nav-icon">🔽</span> Log Out</a
           >
         </nav>
@@ -70,9 +75,13 @@ export function info() {
             <button class="icon-button">⌄</button>
           </div>
         </div>
-      `;
+    `;
+  sidebar.querySelector(".logout-link")?.addEventListener("click", (event) => {
+    event.preventDefault();
+    logout();
+  });
 
-    topbar.innerHTML = `
+  topbar.innerHTML = `
           <div class="first">
             <span>Student portal</span><i>/</i><strong>Overview</strong>
           </div>
@@ -116,6 +125,5 @@ export function info() {
               <strong> ${student.name} </strong>
             </span>
           </div>
-          `;
-  }
+        `;
 }

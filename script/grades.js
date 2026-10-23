@@ -1,62 +1,63 @@
 import { info } from "../script/index.js";
 import { student } from "../script/profile.js";
 
-info();
+if (student) {
+  info();
 
-let creditHour = student.subjectCreditHours[0];
-let totalCreditHours = Object.values(creditHour).reduce((total, hour) => {
-  return total + hour;
-});
+  let creditHour = student.subjectCreditHours[0];
+  let totalCreditHours = Object.values(creditHour).reduce((total, hour) => {
+    return total + hour;
+  });
 
-let creditHours = student.subjectScore[0];
-let totalCreditHour = Object.values(creditHours).reduce((total, hour) => {
-  return total + hour / 6;
-});
-const subjectKeys = [
-  "firstSubject",
-  "secondSubject",
-  "thirdSubject",
-  "fourthSubject",
-  "fifthSubject",
-  "sixthSubject",
-];
+  let creditHours = student.subjectScore[0];
+  let totalCreditHour = Object.values(creditHours).reduce((total, hour) => {
+    return total + hour / 6;
+  });
+  const subjectKeys = [
+    "firstSubject",
+    "secondSubject",
+    "thirdSubject",
+    "fourthSubject",
+    "fifthSubject",
+    "sixthSubject",
+  ];
 
-function gradeStatus(score) {
-  if (score >= 80) return "A+";
-  if (score >= 75) return "A";
-  if (score >= 70) return "B+";
-  if (score >= 65) return "B";
-  if (score >= 60) return "C+";
-  if (score >= 55) return "C";
-  if (score >= 50) return "D+";
-  if (score >= 45) return "D";
-  return "F";
-}
+  function gradeStatus(score) {
+    if (score >= 80) return "A+";
+    if (score >= 75) return "A";
+    if (score >= 70) return "B+";
+    if (score >= 65) return "B";
+    if (score >= 60) return "C+";
+    if (score >= 55) return "C";
+    if (score >= 50) return "D+";
+    if (score >= 45) return "D";
+    return "F";
+  }
 
-function gradePoint(score) {
-  if (score >= 80) return 15;
-  if (score >= 75) return 13;
-  if (score >= 70) return 12;
-  if (score >= 65) return 10;
-  if (score >= 60) return 8;
-  if (score >= 55) return 6;
-  if (score >= 50) return 4;
-  if (score >= 45) return 2;
-  return 0;
-}
-const getItem = Object.values(student.subjectScore[0]).reduce((add, score) => {
-  return add + gradePoint(score);
-});
+  function gradePoint(score) {
+    if (score >= 80) return 15;
+    if (score >= 75) return 13;
+    if (score >= 70) return 12;
+    if (score >= 65) return 10;
+    if (score >= 60) return 8;
+    if (score >= 55) return 6;
+    if (score >= 50) return 4;
+    if (score >= 45) return 2;
+    return 0;
+  }
+  const getItem = Object.values(student.subjectScore[0]).reduce(
+    (add, score) => add + gradePoint(score),
+  );
 
-let totalGPA = getItem / totalCreditHours;
+  let totalGPA = getItem / totalCreditHours;
 
-const courseRows = subjectKeys
-  .map((subjectKey) => {
-    const score = student.subjectScore[0][subjectKey];
-    const status = gradeStatus(score);
-    const statusPoint = gradePoint(score);
+  const courseRows = subjectKeys
+    .map((subjectKey) => {
+      const score = student.subjectScore[0][subjectKey];
+      const status = gradeStatus(score);
+      const statusPoint = gradePoint(score);
 
-    return `
+      return `
       <div>
         <span><strong>${student.subject[0][subjectKey]}</strong></span>
         <span class="subject-code">${student.subjectCode[0][subjectKey]}</span>
@@ -66,10 +67,10 @@ const courseRows = subjectKeys
         <span class="status-badge-class">${status}</span>
       </div>
     `;
-  })
-  .join("");
+    })
+    .join("");
 
-const gradesHTML = `
+  const gradesHTML = `
     <div class="page-hero">
       <div>
         <p class="eyebrow">ACADEMIC RECORD</p>
@@ -122,5 +123,6 @@ const gradesHTML = `
         <p> Total Credit for all Courses.</p>
       </article>
     </div>
-`;
-document.querySelector(".js-grades").innerHTML = gradesHTML;
+  `;
+  document.querySelector(".js-grades").innerHTML = gradesHTML;
+}

@@ -21,17 +21,27 @@
           <div class="form_group">
             <label>
               <p class="text-p">Student ID :</p>
-              <input type="text" class="id" />
+              <input
+                type="text"
+                class="id"
+                autocomplete="username"
+                required
+              />
             </label>
           </div>
           <div class="form_group">
             <label>
               <p class="text-p">Password :</p>
-              <input type="password" class="password" />
+              <input
+                type="password"
+                class="password"
+                autocomplete="current-password"
+                required
+              />
             </label>
           </div>
           <div class="submit">
-            <button type="button" class="loginBtn">Log In</button>
+            <button type="submit" class="loginBtn">Log In</button>
           </div>
         </form>
       </div>

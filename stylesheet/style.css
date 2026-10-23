@@ -2155,8 +2155,12 @@ select {
   }
 }
 .log {
-  background-color: #ffcd9e;
-  color: white;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f2f5fb;
+  color: var(--ink);
 }
 .settings-page .page-hero {
   align-items: center;
@@ -2389,119 +2393,124 @@ select {
     grid-template-columns: 1fr;
   }
 }
-.form {
+.log .form {
   display: flex;
-  background-color: white;
-  color: #1d1d1d;
-  width: 45%;
-  height: 560px;
-  border: 1px solid white;
-  border-radius: 50px;
-  align-items: center;
-  margin: 2% 26% 20% 26%;
-  flex-direction: column;
-  position: fixed;
-  z-index: 1000;
-}
-.inner {
-  display: flex;
-  color: #1d1d1d;
-  width: 80%;
-  height: 520px;
-  border: 1px solid #d9e1ea;
-  border-radius: 30px;
+  width: min(100%, 440px);
+  height: auto;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  color: var(--ink);
   align-items: center;
   flex-direction: column;
-  margin: 20px 0 0 0;
+  box-shadow: 0 18px 50px rgba(21, 37, 63, 0.12);
 }
-.profile {
+.log .inner {
   display: flex;
-  margin: 10px 0 0 0;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 12px;
+  border: 0;
+  color: #1d1d1d;
+  align-items: center;
+  flex-direction: column;
+}
+.log .profile {
+  display: flex;
+  width: 92px;
+  height: 92px;
+  margin: 8px auto 16px;
   background-color: #f8fafc;
-  height: 120px;
-  width: 120px;
   border: 2px solid #d9e1ea;
   border-radius: 50%;
   align-items: center;
   justify-content: center;
 }
-.pics {
-  height: 115px;
-  width: 115px;
+.log .pics {
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
+  object-fit: cover;
 }
-.guide {
+.log .guide {
   display: block;
-  height: 40px;
-  width: 60%;
-  margin: 5px 0 10px 0;
-  gap: 10px;
+  width: 100%;
+  height: auto;
+  margin: 0 0 22px;
+  text-align: center;
 }
-.guide strong {
+.log .guide strong,
+.log .guide span {
+  padding: 0;
+}
+.log .guide strong {
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  padding: 0 0 0 26%;
+  font: 700 20px "Space Grotesk", sans-serif;
 }
-.guide span {
+.log .guide span {
   display: block;
-  font-family: "Times New Roman", Times, serif;
-  padding: 0 0 0 6%;
-  font-size: 20px;
+  margin-top: 6px;
+  color: var(--muted);
+  font: 14px "DM Sans", sans-serif;
 }
-.form-login {
-  width: 350px;
-  height: 400px;
+.log .form-login {
+  width: 100%;
+  height: auto;
 }
-.form_group {
+.log .form_group {
+  display: block;
+  margin-bottom: 16px;
+}
+.log .text-p {
+  margin: 0 0 7px;
+  font: 600 13px "DM Sans", sans-serif;
+}
+.log .form-login input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d9e1ea;
+  border-radius: 8px;
+  font: 15px "DM Sans", sans-serif;
+}
+.log .form-login input:focus {
+  border-color: var(--blue);
+  outline: 3px solid rgba(83, 121, 245, 0.18);
+}
+.log .submit {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 22px 0 0;
+  border: 0;
 }
-input {
-  width: 300px;
-  height: 40px;
-  outline: none;
-  border: 1px solid #d9e1ea;
-  border-radius: 12px;
-  padding: 0 0 0 12px;
-  font-size: 20px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.text-p {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 16px;
-}
-.submit {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #d9e1ea;
-  margin: 80px 0 0 110px;
-  width: 148px;
-  height: 70px;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.submit button {
-  width: 146px;
-  background-color: darkgreen;
-  height: 70px;
+.log .submit button {
+  width: 100%;
+  min-height: 46px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--ink);
   color: white;
-  outline: none;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
+  font: 600 15px "DM Sans", sans-serif;
 }
-.submit button:hover {
-  background-color: lightseagreen;
-  color: black;
-  opacity: 1s;
+.log .submit button:hover {
+  background: #263754;
+  color: #fff;
 }
-.submit button:active {
-  background-color: lightgreen;
-  opacity: 1s;
+.log .submit button:focus-visible {
+  outline: 3px solid rgba(83, 121, 245, 0.4);
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .log {
+    padding: 14px;
+  }
+
+  .log .form {
+    padding: 14px;
+  }
 }

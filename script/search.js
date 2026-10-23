@@ -1,4 +1,16 @@
 import { students } from "../script/student.js";
+import { logout, redirectToLogin } from "./auth.js";
+
+const studentId = localStorage.getItem("Id");
+if (!students.some((student) => student.StudentId === studentId)) {
+  redirectToLogin();
+}
+
+document.querySelector(".logout-link")?.addEventListener("click", (event) => {
+  event.preventDefault();
+  logout();
+});
+
 let search = "";
 
 search += `

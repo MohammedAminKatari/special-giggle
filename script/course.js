@@ -1,19 +1,19 @@
 import { info } from "../script/index.js";
 import { student } from "../script/profile.js";
 
-info();
-
-let creditHour = student.subjectCreditHours[0];
-let totalCreditHours = Object.values(creditHour).reduce((total, hour) => {
-  return total + hour;
-});
-
-let creditHours = student.subjectScore[0];
-let totalCreditHour = Object.values(creditHours).reduce((total, hour) => {
-  return total + hour / 6;
-});
-let coursesHTML = "";
 if (student) {
+  info();
+
+  let creditHour = student.subjectCreditHours[0];
+  let totalCreditHours = Object.values(creditHour).reduce((total, hour) => {
+    return total + hour;
+  });
+
+  let creditHours = student.subjectScore[0];
+  let totalCreditHour = Object.values(creditHours).reduce((total, hour) => {
+    return total + hour / 6;
+  });
+  let coursesHTML = "";
   coursesHTML += `
      <div class="page-hero">
             <div>
@@ -108,8 +108,7 @@ if (student) {
               <div><strong>${totalCreditHour.toFixed(0)}%</strong><span>Average progress</span></div>
             </div>
           </section>
-    `;
-}
+  `;
 
-document.querySelector(".course-js").innerHTML = coursesHTML;
-console.log(coursesHTML);
+  document.querySelector(".course-js").innerHTML = coursesHTML;
+}

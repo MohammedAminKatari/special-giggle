@@ -79,13 +79,6 @@ if (student) {
             </div>
           </section>
 `;
-} else {
-  studentInfo = `
-    <section class="pro-card wide">
-      <h1>Profile unavailable</h1>
-      <p>Please log in again to view your student profile.</p>
-    </section>
-  `;
 }
 
 const profileContainer = document.querySelector(".js-page-profile");
